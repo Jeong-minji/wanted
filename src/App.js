@@ -1,8 +1,18 @@
 import React from 'react';
-import PreAssignmentGuide from './pages/PreAssignmentGuide';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import GlobalStyles from './styles/globalStyles';
 
-function App() {
-  return <PreAssignmentGuide />;
-}
+import Login from './pages/Login';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <GlobalStyles />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;
